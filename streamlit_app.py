@@ -38,8 +38,6 @@ input_df = pd.DataFrame({
 # One-hot encoding
 from sklearn.preprocessing import OneHotEncoder
 
-encoder = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
-encoder.fit(pd.DataFrame(columns=expected_columns))
 input_encoded = pd.get_dummies(input_df)
 
 # Çatmayan sütunları 0-lamaq
